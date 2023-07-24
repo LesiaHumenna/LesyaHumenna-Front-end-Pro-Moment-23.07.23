@@ -1,0 +1,56 @@
+.btn-container {
+    margin-bottom: 20px;
+}
+
+.btn1 {
+    width         : 30%;
+    display       : flex;
+    align-content : center;
+    flex-direction: column;
+    margin        : 0px auto;
+    gap           : 10px;
+    margin-top    : 20px;
+    margin-bottom : 20px;
+}
+
+.btn-primary {
+    display: none;
+}
+
+.btn2 {
+    width         : 30%;
+    display       : flex;
+    align-content : center;
+    flex-direction: column;
+    margin        : 0px auto;
+    gap           : 10px;
+}
+
+.alert-info {
+    display: none;
+}
+
+.moment-container {
+    width           : 50%;
+    background-color: #b0f3d4;
+    margin          : 0px auto;
+}
+
+.btn-submit {
+    background-color: white;
+    border-color    : #4e28f5;
+    cursor          : pointer;
+}
+
+.is-invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback {
+    display: none;
+    color  : #dc3545;
+}
+
+/* .is-invalid+.invalid-feedback { */
+/* display: block; */
+/* } */
