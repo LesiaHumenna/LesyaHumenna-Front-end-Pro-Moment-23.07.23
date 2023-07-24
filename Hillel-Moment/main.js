@@ -6,6 +6,7 @@ const btnAlertInfo = document.querySelector(".alert-info");
 const form = document.querySelector("#form");
 const btnSubmit = document.querySelector(".btn-submit");
 const date = document.getElementById("date");
+const invalid = document.getElementById("invalid-feedback");
 
 const tooltipTriggerList = document.querySelectorAll(
   '[data-bs-toggle="tooltip"]'
@@ -52,13 +53,15 @@ form.addEventListener("submit", (e) => {
 });
 
 //regex
-// btnSubmit.addEventListener("click", function (e) {
-//   e.preventDefault();
-// 
-//   const regex = /^\d{4}-\d{2}-\d{2}$/;
-//   if (!regex.test(date.value)) {
-    // date.classList.add("is-invalid");
-//   } else {
-    // date.classList.remove("is-invalid");
-//   }
-// });
+btnSubmit.addEventListener("click", function (e) {
+    e.preventDefault();
+  
+    const regex = /^\d{4}-\d{2}-\d{2}$/;
+    if (regex.test(date.value)) {
+      const momentDate = moment(date.value, 'YYYY-MM-DD');
+      invalid.textContent = `Format BD: ${momentDate.format('dddd, MMMM Do YYYY')}`;
+    } else {
+      date.classList.add("is-invalid");
+    }
+  });
+  

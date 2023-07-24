@@ -51,6 +51,6 @@
     color  : #dc3545;
 }
 
-/* .is-invalid+.invalid-feedback { */
-/* display: block; */
-/* } */
+.is-invalid .invalid-feedback {
+display: block;
+}
